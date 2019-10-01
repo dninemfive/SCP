@@ -68,18 +68,14 @@ namespace SCP
                     );
             };
             yield return droppingTime;
-            //actually 9, I counted from 1 earlier
-            Log.Message("Toil 9:");
             yield return new Toil
             {
                 initAction = delegate
                 {
-                    Log.Message("\tbegin initAction");
                     this.customString = "SCP_SCPDropFinished".Translate();
                     IntVec3 position = this.DropLocation;
                     this.pawn.carryTracker.TryDropCarriedThing(position, ThingPlaceMode.Direct, out Thing thing, null);
                         SacrificeCompleted();
-                    Log.Message("\tend initAction");
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
@@ -91,15 +87,6 @@ namespace SCP
             {
                 initAction = delegate
                 {
-                    ////It's a day to remember
-                    //TaleDef taleToAdd = TaleDef.Named("HeldSermon");
-                    //if ((this.pawn.IsColonist || this.pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
-                    //{
-                    //    TaleRecorder.RecordTale(taleToAdd, new object[]
-                    //    {
-                    //       this.pawn,
-                    //    });
-                    //}
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
@@ -121,22 +108,11 @@ namespace SCP
 
         private void SacrificeCompleted()
         {
-            Log.Message("\tSacrificeCompleted()");
             //Drop them in~~
             this.Takee.isMoving = false;
-
             this.Takee.Position = this.DropLocation;
-            Log.Message("\tDropLocation = " + this.DropLocation);
             this.Takee.Notify_Teleported(false);
-            Log.Message("this shouldn't");
             this.Takee.stances.CancelBusyStanceHard();
-
-            //Record a tale
-            //TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, new object[]
-            //{
-            //            this.pawn,
-            //            this.Takee
-            //});
         }
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
