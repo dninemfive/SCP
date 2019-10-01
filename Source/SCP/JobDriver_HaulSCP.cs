@@ -31,10 +31,10 @@ namespace SCP
         {
             //Commence fail checks!
             this.FailOnDestroyedOrNull(TargetIndex.A);
-
+            //1, 2
             yield return Toils_Reserve.Reserve(TakeeIndex, 1);
             yield return Toils_Reserve.Reserve(DestinationIndex, 1);
-
+            //3
             yield return new Toil
             {
                 initAction = delegate
@@ -42,16 +42,18 @@ namespace SCP
                     this.customString = "SCP_GatheringSCPForDrop".Translate();
                 }
             };
-
+            //4-6
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
             yield return Toils_Construct.UninstallIfMinifiable(TargetIndex.A).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
+            /*
             yield return new Toil
             {
                 initAction = delegate
                 {
                     Find.World.GetComponent<WorldComponent_UniqueTracker>().uniquePawns.RemoveAll(x => x == Takee);
                 }
-            };
+            };*/
+            //7,8
             yield return Toils_Haul.StartCarryThing(TargetIndex.A);
             yield return Toils_Goto.GotoCell(TargetIndex.B, PathEndMode.ClosestTouch);
             Toil droppingTime = new Toil()
@@ -66,15 +68,18 @@ namespace SCP
                     );
             };
             yield return droppingTime;
+            //actually 9, I counted from 1 earlier
+            Log.Message("Toil 9:");
             yield return new Toil
             {
                 initAction = delegate
                 {
+                    Log.Message("\tbegin initAction");
                     this.customString = "SCP_SCPDropFinished".Translate();
                     IntVec3 position = this.DropLocation;
                     this.pawn.carryTracker.TryDropCarriedThing(position, ThingPlaceMode.Direct, out Thing thing, null);
-                    
                         SacrificeCompleted();
+                    Log.Message("\tend initAction");
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
@@ -116,11 +121,14 @@ namespace SCP
 
         private void SacrificeCompleted()
         {
+            Log.Message("\tSacrificeCompleted()");
             //Drop them in~~
             this.Takee.isMoving = false;
 
             this.Takee.Position = this.DropLocation;
+            Log.Message("\tDropLocation = " + this.DropLocation);
             this.Takee.Notify_Teleported(false);
+            Log.Message("this shouldn't");
             this.Takee.stances.CancelBusyStanceHard();
 
             //Record a tale
