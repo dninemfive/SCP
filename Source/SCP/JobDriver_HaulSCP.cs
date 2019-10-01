@@ -45,7 +45,7 @@ namespace SCP
             //4-6
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
             yield return Toils_Construct.UninstallIfMinifiable(TargetIndex.A).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
-            /*
+            /* commented out because it fixes the NullReferenceException when moving SCPs before joining a faction and afaict doesn't do anything but break things anyway
             yield return new Toil
             {
                 initAction = delegate
