@@ -1,54 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <SCP.CustomFactionDef>
+  <FactionDef>
     <defName>SCP_ChaosInsurgency</defName>
     <label>Chaos Insurgency</label>
     <fixedName>Chaos Insurgency</fixedName>
     <description>.</description>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
-    <!-- START Custom Code from SCP.FactionDef -->
-    <representativeKind>SCP_CIRepresentative</representativeKind>
-    <representativeMessage>'Attention, We are the Chaos Insurgency. All you need to know is we want to help humanity, to build a brighter future for everyone. We extend our hand to you. Join us.' The Representative speaks.
-
-As a reward they will pay you for the SCP's.</representativeMessage>
-    <acceptWorker>SCP.AcceptWorker_PayForSCP</acceptWorker>
-    <acceptMessages>
-      <li>The SCP have been removed from your location.</li>
-      <li>Delta Command will learn what makes it tick to better ourselves.</li> 
-      <li>You have joined the Chaos Insurgency.</li>
-    </acceptMessages>
-    <declineMessages>      
-      <li>The SCP remains at your location under your custody.</li>
-      <li>You have declined to join the Chaos Insurgency.</li>
-    </declineMessages>
-    <factionBuildings>
-      <li>SCP_CIBench</li>
-    </factionBuildings>
-    <hostileToFactions>
-      <li>SCP_GlobalOccultCoalition</li>
-      <li>SCP_TheFoundation</li>
-    </hostileToFactions>    
-    <hostileByDefault>true</hostileByDefault>
-    <startingRelations>
-      <li>
-        <factionDef>SCP_TheFoundation</factionDef>
-        <kind>Hostile</kind>
-      </li>
-      <li>
-        <factionDef>SCP_GlobalOccultCoalition</factionDef>
-        <kind>Hostile</kind>
-      </li>
-    </startingRelations>
-    <!-- 
-    *** TODO ***
-    <factionResearch>
-      <li>SCP_TechOne</li>
-    </factionResearch>
-    -->
-    <!-- END -->
     <colorSpectrum>
- <li>(255,255,255)</li>
+		<li>(255,255,255)</li>
     </colorSpectrum>
     <startingGoodwill>
       <min>0</min>
@@ -153,5 +113,5 @@ As a reward they will pay you for the SCP's.</representativeMessage>
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-  </SCP.CustomFactionDef>
+  </FactionDef>
 </Defs>

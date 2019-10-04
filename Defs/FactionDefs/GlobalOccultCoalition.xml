@@ -1,46 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <SCP.CustomFactionDef>
+  <FactionDef>
     <defName>SCP_GlobalOccultCoalition</defName>
     <label>Global Occult Coalition</label>
     <fixedName>Global Occult Coalition</fixedName>
     <description>.</description>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
-    <!-- START Custom Code from SCP.FactionDef -->
-    <representativeKind>SCP_GOCRepresentative</representativeKind>
-    <representativeMessage>'Greetings Colonists,we are the Global Occult Coalition. We are dedicated to the protection of humanity and the destruction of any Supernatural Anomalies. Will you join us?' The Representative asks.
-	
-As a reward they will help you finish whatever research you are working on in exchange for the SCP's.</representativeMessage>
-    <acceptWorker>SCP.AcceptWorker_TerminateSCP</acceptWorker>
-    <acceptMessages>
-      <li>The SCP have been removed from your location.</li>
-      <li>The SCP will be analyzed and terminated.</li> 
-      <li>You have joined the Global Occult Coalition.</li>
-    </acceptMessages>
-    <declineMessages>      
-      <li>The SCP remains at your location under your custody.</li>
-      <li>You have declined to join the Global Occult Coalition.</li>
-    </declineMessages>
-    <factionBuildings>
-     <li>SCP_GOCBench</li>
-    </factionBuildings>
-    <hostileToFactions>
-      <li>SCP_ChaosInsurgency</li>
-    </hostileToFactions>    
-    <startingRelations>
-      <li>
-        <factionDef>SCP_TheFoundation</factionDef>
-        <kind>Hostile</kind>
-      </li>
-    </startingRelations>    
-    <!-- 
-    *** TODO ***
-    <factionResearch>
-      <li>SCP_TechOne</li>
-    </factionResearch>
-    -->
-    <!-- END -->
     <colorSpectrum>
  <li>(255,255,255)</li>
     </colorSpectrum>
@@ -147,5 +113,5 @@ As a reward they will help you finish whatever research you are working on in ex
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-  </SCP.CustomFactionDef>
+  </FactionDef>
 </Defs>
