@@ -161,7 +161,7 @@ The MP5 is one of the most widely used submachine guns in the world, having been
 
 In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successor</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/_Foundation/MP5K_PDW</texPath>
+			<texPath>Things/Item/Equipment/_Chaos/MP5K_PDW</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>

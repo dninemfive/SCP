@@ -38,7 +38,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_M9</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
@@ -71,7 +71,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
@@ -105,7 +105,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
@@ -138,7 +138,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <techHediffsTags>
       <li>Simple</li>
@@ -171,7 +171,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_Glock17HRT</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <techHediffsTags>
@@ -221,9 +221,9 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_P90_Contractor</li>
+	  <li>RN_MP5A2HRT</li>
+	  <li>RN_UMP45HRT</li>
 	  <li>RN_Remington870HRT</li>
-	  <li>RN_Glock17HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -260,7 +260,8 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_P90_Contractor</li>	
+	  <li>RN_MP5A2HRT</li>
+	  <li>RN_UMP45HRT</li>	
 	  <li>RN_Remington870HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -299,6 +300,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M4A1HRT</li>
+	  <li>RN_G36CHRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -390,6 +392,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_MP5A2HRT</li>
+	  <li>RN_UMP45HRT</li>	
 	  <li>RN_Remington870HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -455,6 +458,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M4A1HRT</li>
+	  <li>RN_G36CHRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -519,7 +523,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RNGun_MK48</li>
+	  <li>RNGun_M249</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -587,6 +591,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_M24A2HRT</li>	
+	  <li>RN_M107</li>	
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>

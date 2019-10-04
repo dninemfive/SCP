@@ -71,6 +71,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_Glock17HRT</li>
+	  <li>RN_M9HRT</li>
     </weaponTags>
     <techHediffsTags>
       <li>Simple</li>
@@ -154,6 +155,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_MP5KPDW</li>
+	  <li>RN_KRISSVector</li>
 	  <li>RN_AA12</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -193,7 +195,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_HK416Elite</li>
+	  <li>RN_M4A1HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -231,7 +233,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RNGun_M249</li>
+	  <li>RNGun_MK48</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -269,6 +271,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_MK11</li>
+	  <li>RN_M107</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>

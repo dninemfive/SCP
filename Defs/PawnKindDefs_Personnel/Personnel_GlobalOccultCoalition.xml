@@ -163,8 +163,8 @@
           <!-- SCIENTIST -->
       <PawnKindDef ParentName="GOCPersonnelBase">
     <defName>SCP_GOCScientist</defName>
-    <label>foundation scientist</label>
-    <labelPlural>scientest</labelPlural>
+    <label>GOC scientist</label>
+    <labelPlural>scientest</labelPlural> <!-- assuming that's a deliberate typo -->
     <combatPower>40</combatPower>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>false</isFighter>
@@ -287,7 +287,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_KRISSVector</li>	
+	  <li>RN_P90_Contractor</li>	
 	  <li>RN_KSG</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
@@ -355,7 +355,7 @@
       <max>750</max>
     </weaponMoney>
     <weaponTags>
-	  <li>RN_G36CHRT</li>
+	  <li>RN_HK416Elite</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
@@ -487,6 +487,7 @@
     </weaponMoney>
     <weaponTags>
 	  <li>RN_AS50</li>
+	  <li>RN_HK417HRT</li>
     </weaponTags>
     <combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>
