@@ -10,7 +10,7 @@
 
 It is the standard assault rifle of the French Armed Forces and Norwegian Armed Forces, and was the weapon used by SEAL Team Six to kill Osama Bin Laden in 2011.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/Rifles/AR-15/HK416/HK416_Elite</texPath>
+      <texPath>Things/Item/Equipment/_GOC/HK416_Elite</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>

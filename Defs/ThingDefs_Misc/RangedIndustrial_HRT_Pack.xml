@@ -15,7 +15,7 @@
 
 The M9 won a competition in the 1980s to replace the M1911A1 as the primary sidearm of the U.S. military, beating many other contenders, and only narrowly defeating the SIG P226 for cost reasons.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/M9_HRT</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/M9_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Autopistol</soundInteract>
@@ -87,7 +87,7 @@ The M9 won a competition in the 1980s to replace the M1911A1 as the primary side
 	
 Glocks are also popular firearms among civilians for recreational and competition shooting, home and self-defense, and concealed carry or open carry.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/Glock17_HRT</texPath>
+      <texPath>Things/Item/Equipment/_GOC/Glock17_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Autopistol</soundInteract>
@@ -156,7 +156,7 @@ Glocks are also popular firearms among civilians for recreational and competitio
 	
 The M24 is referred to as a "weapon system" because it consists of not only a rifle, but also a detachable telescopic sight and other accessories.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/M24_HRT</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/M24_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -226,7 +226,7 @@ The M24 is referred to as a "weapon system" because it consists of not only a ri
 	
 The HK417 is intended for use in roles where the greater penetrative power, stopping power, and range of the 7.62×51mm cartridge are required.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/HK417_HRT</texPath>
+      <texPath>Things/Item/Equipment/_GOC/HK417_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -298,7 +298,7 @@ The MP5 is one of the most widely used submachine guns in the world, having been
 
 In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successor</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/HRT_Pack/MP5A2_HRT</texPath>
+			<texPath>Things/Item/Equipment/_Foundation/MP5A2_HRT</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
@@ -372,7 +372,7 @@ In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successo
 		<label>UMP45 HRT</label>
 		<description>The Heckler and Koch UMP (Universale Maschinenpistole, German for "Universal Submachine Gun") is a submachine gun developed and manufactured by Heckler and Koch. The UMP has been adopted by various agencies such as the U.S. Customs and Border Protection. Heckler and Koch developed the UMP as a lighter and cheaper successor to the MP5, though both remain in production.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/HRT_Pack/UMP45_HRT</texPath>
+			<texPath>Things/Item/Equipment/_Foundation/UMP45_HRT</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
@@ -443,7 +443,7 @@ In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successo
     <label>Remington 870 HRT</label>
     <description>The Remington Model 870 is a pump-action shotgun manufactured by Remington Arms Company, LLC. It is widely used by the public for sport shooting, hunting, and self-defense and used by law enforcement and military organizations worldwide.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/Remington870_HRT</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/Remington870_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
@@ -513,7 +513,7 @@ In 1999, Heckler and Koch developed the Heckler and Koch UMP, the MP5's successo
 
 The M4 carbine is extensively used by the United States Armed Forces and is largely replacing the M16 rifle in United States Army and United States Marine Corps combat units as the primary infantry weapon and service rifle.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/M4A1_HRT</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/M4A1_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -584,7 +584,7 @@ The M4 carbine is extensively used by the United States Armed Forces and is larg
 	
 It was accepted into service with the Bundeswehr in 1997, replacing the G3.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/HRT_Pack/G36C_HRT</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/G36C_HRT</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>

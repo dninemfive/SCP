@@ -8,7 +8,7 @@
     <label>AA-12</label>
     <description>The Auto Assault-12 (AA-12), originally designed and known as the Atchisson Assault Shotgun, is a shotgun developed in 1972 by Maxwell Atchisson. The most prominent feature is reduced recoil. The current 2005 version has been developed over 18 years since the patent was sold to Military Police Systems, Inc. The original design was the basis of several later weapons, including the USAS-12 combat shotgun. The weapon is fully automatic only. However, it fires at a rate of 300 rounds per minute, allowing it to fire one round at a time with brief trigger pulls. It is fed from either an 8-shell box magazine, or a 20- or 32-shell drum magazine.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/Shotgun/AA12</texPath>
+      <texPath>Things/Item/Equipment/_Chaos/AA12</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>
@@ -78,7 +78,7 @@
     <label>KSG</label>
     <description>The Kel-Tec KSG is a bullpup 12-gauge pump action shotgun designed by Kel-Tec. It has two tube magazines which the user of the gun can switch between manually. Each tube holds a total of seven 2.75-inch (70 mm) 12-gauge shotshells or six 3-inch (76 mm) shotshells.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/Shotgun/KSG</texPath>
+      <texPath>Things/Item/Equipment/_GOC/KSG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Shotgun</soundInteract>

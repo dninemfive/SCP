@@ -12,7 +12,7 @@
 
 During the Cold War the FAL was adopted by many countries of the North Atlantic Treaty Organization (NATO), with the notable exception of the United States. It is one of the most widely used rifles in history, having been used by more than 90 countries. Because of its prevalence and widespread usage among the militaries of many NATO and first world countries during the Cold War it was given the title "The right arm of the Free World".</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/Rifles/Others/FN_FAL</texPath>
+      <texPath>Things/Item/Equipment/_GOC/FN_FAL</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>

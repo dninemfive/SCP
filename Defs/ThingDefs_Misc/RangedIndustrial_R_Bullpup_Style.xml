@@ -11,7 +11,7 @@
 
 It was adopted by the Austrian Army as the StG 77 (Sturmgewehr 77) in 1978, where it replaced the 7.62×51mm NATO StG 58 automatic rifle (a licence-built FN FAL). In production since 1978, it is the standard small arm of the Austrian Bundesheer and various national police units. Its variants have also been adopted by the armed forces of dozens of countries.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/Rifles/Bullpup/AUG_A2</texPath>
+      <texPath>Things/Item/Equipment/_GOC/AUG_A2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>

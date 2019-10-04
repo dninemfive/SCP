@@ -11,7 +11,7 @@
 
 It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN Herstal based in the United States. The Mk 48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/MK48</texPath>
+			<texPath>Things/Item/Equipment/_Chaos/MK48</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
@@ -83,7 +83,7 @@ It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN H
 		<label>FN Minimi</label>
 		<description>The FN Minimi (short for French: Mini Mitrailleuse; "mini machine gun") is a Belgian 5.56mm Squad Automatic Weapon, or SAW developed by Fabrique Nationale (FN) in Herstal by Ernest Vervier. First introduced in the late 1970s, it is now in service in more than 75 countries.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/FN_Minimi</texPath>
+			<texPath>Things/Item/Equipment/_GOC/FN_Minimi</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
@@ -155,7 +155,7 @@ It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN H
 		<label>M249</label>
 		<description>The M249 light machine gun (LMG), formerly designated the M249 Squad Automatic Weapon (SAW) and formally written as Light Machine Gun, 5.56 mm, M249, is the American adaptation of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal (FN).</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/LMG/M249SAW</texPath>
+			<texPath>Things/Item/Equipment/_Foundation/M249SAW</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>

@@ -10,7 +10,7 @@
 	
 It is also called the Light Fifty for its .50 BMG (12.7×99mm NATO) chambering and significantly lighter weight compared to previous applications.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/M_Semi_Auto/M107</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/M107</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -80,7 +80,7 @@ It is also called the Light Fifty for its .50 BMG (12.7×99mm NATO) chambering a
 	
 In 1957, the basic AR-10 design was rescaled and substantially modified by ArmaLite to accommodate the .223 Remington cartridge, and given the designation ArmaLite AR-15.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/M_Semi_Auto/AR-10_DMR</texPath>
+      <texPath>Things/Item/Equipment/_Foundation/AR-10_DMR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -149,7 +149,7 @@ In 1957, the basic AR-10 design was rescaled and substantially modified by ArmaL
 	
 The AS50 employs a gas operated semi-automatic action and muzzle brake, allowing for lower recoil than the AW50 bolt-action rifle and faster target acquisition.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/M_Semi_Auto/AS50</texPath>
+      <texPath>Things/Item/Equipment/_GOC/AS50</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
@@ -220,7 +220,7 @@ The AS50 employs a gas operated semi-automatic action and muzzle brake, allowing
 
 The SR-25 uses a rotating bolt and a direct impingement gas system. It is loosely based on Stoner's AR-10, rebuilt in its original 7.62×51mm NATO caliber. After some modifications, SOCOM adopted the SR-25 as the Mk 11 Mod 0 in May 2000.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/M_Semi_Auto/MK11</texPath>
+      <texPath>Things/Item/Equipment/_Chaos/MK11</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
