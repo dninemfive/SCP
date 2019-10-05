@@ -41,4 +41,7 @@
   <SCP_DialogNote>[You can accept this offer or wait for other offers to reveal themselves.]</SCP_DialogNote>
   <SCP_MustHaveACurrentResearchProject>Select a new research project first.</SCP_MustHaveACurrentResearchProject>
 
+  <SCP_SetLevelAccess>Set Level Access</SCP_SetLevelAccess>
+  <SCP_SetLevelAccessDesc>Set the keycard level necessary to be able to use this door</SCP_SetLevelAccessDesc>
+  <SCP_SetKeycard>Set Keycard Level Access to {0}</SCP_SetKeycard>
 </LanguageData>

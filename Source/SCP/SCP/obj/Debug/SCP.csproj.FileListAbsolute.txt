@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Source\SCP\SCP\obj\Debug\SCP.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Source\SCP\SCP\obj\Debug\SCP.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Source\SCP\SCP\obj\Debug\SCP.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Source\SCP\SCP\obj\Debug\SCP.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Source\SCP.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SCP\Assemblies\SCP.dll

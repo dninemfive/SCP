@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="DoorBase">
+		<defName>SCP_Door</defName>
+		<label>SCPDoor</label>
+		<description>Blah</description>
+		<statBases>
+			<WorkToBuild>10</WorkToBuild>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Door/SCPDoor_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Door/SCPDoor_MenuIcon</uiIconPath>
+		<costStuffCount>500</costStuffCount>
+		<designationHotKey>Misc2</designationHotKey>
+		
+		<comps>
+			<li Class="SCP.CompProperties_KeyCard">
+				<compClass>SCP.CompKeyCard</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
+		
