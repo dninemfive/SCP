@@ -44,27 +44,30 @@ namespace SCP
             {
                 if(warnOnFail)
                 {
-                    Log.Error("Tried to SEt Keycard on non-Keycard thing " + t, false);
+                    Log.Error("Tried to Set Keycard on non-Keycard thing " + t, false);
                 }
                 return;
             }
             comp.Level = value;
         }
 
-        public static bool HasKeycardAccess(this Thing t, Pawn pawn, Faction faction)
+        public static bool HasKeycardAccess(this Thing t, Pawn pawn)
         {
-            if (faction is null) return false;
-            if (faction != Faction.OfPlayer) return false;
+            if (Faction.OfPlayer is null) return false;
+            if (Faction.OfPlayer != t.Faction) return false;
+            if (!pawn.RaceProps.Humanlike) return false;
+            if (!(t as ThingWithComps).GetComp<CompPowerTrader>().PowerOn) return false;
+            Log.Message("Test: " + (t as ThingWithComps).GetComp<CompPowerTrader>().PowerOn);
             ThingWithComps thingWithComps = t as ThingWithComps;
             if (thingWithComps is null) return true;
             CompKeycard comp = thingWithComps.GetComp<CompKeycard>();
             if (comp.Locked) return false;
-            return comp.Level == 1 ? true : false;
+            return comp.Level <= pawn.def.GetModExtension<KeycardHandler>().AccessLevel ? true : false;
         }
 
         public static bool KeyCardAccessToPass(this Building_Door t, Pawn pawn)
         {
-            return t.HasKeycardAccess(pawn, pawn.Faction);
+            return t.HasKeycardAccess(pawn);
         }
     }
 }

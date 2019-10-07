@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/ThingDef[defName="Human"]</xpath>
+				<value>
+					<li Class="SCP.KeycardHandler">
+						<levelAccess>1</levelAccess>
+					</li>
+				</value>
+			</li>
+		
+		</operations>
+	</Operation>
+</Patch>

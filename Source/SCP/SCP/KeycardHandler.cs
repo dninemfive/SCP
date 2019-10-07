@@ -19,11 +19,22 @@ using Verse.Sound;
 
 namespace SCP
 {
-    /*public class KeycardHandler : Pawn
+    public class KeycardHandler : DefModExtension
     {
-        public KeycardHandler()
+        public int AccessLevel
         {
-            
+            get
+            {
+                return this.levelAccess > 5 ? 5 : this.levelAccess < 1 ? 1 : this.levelAccess;
+            }
+            set
+            {
+                if (value == this.levelAccess) return;
+                this.levelAccess = value;
+                Find.CurrentMap.reachability.ClearCache();
+            }
         }
-    }*/
+
+        public int levelAccess;
+    }
 }

@@ -31,7 +31,6 @@ namespace SCP
             this.closeOnClickedOutside = true;
             this.curValue = startingValue == -2147483648 ? from : startingValue;
         }
-        public LocalTargetInfo test { get; private set; }
         public override Vector2 InitialSize
         {
             get
@@ -46,7 +45,7 @@ namespace SCP
             this.curValue = (int)Widgets.HorizontalSlider(rect, (float)this.curValue, (float)this.from, (float)this.to,
                 true, this.textGetter(this.curValue), null, null, 1f);
             Text.Font = GameFont.Small;
-            Rect rect2 = new Rect(inRect.x, inRect.y - 30f, inRect.width / 2f, 30f);
+            Rect rect2 = new Rect(inRect.x, inRect.yMax - 30f, inRect.width / 2f, 30f);
             if (Widgets.ButtonText(rect2, "CancelButton".Translate(), true, false, true))
             {
                 this.Close(true);
@@ -72,5 +71,6 @@ namespace SCP
         private const float BotAreaHeight = 30f;
 
         private const float TopPadding = 15;
+
     }
 }

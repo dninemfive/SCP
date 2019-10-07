@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command_KeycardPawn.cs" />
     <Compile Include="Command_SetLevelAccess.cs" />
     <Compile Include="CompKeycard.cs" />
     <Compile Include="CompProperties_Keycard.cs" />

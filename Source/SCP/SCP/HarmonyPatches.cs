@@ -39,6 +39,12 @@ namespace SCP
             harmony.Patch(original: AccessTools.Method(type: typeof(GenPath), name: "ShouldNotEnterCell"),
                 prefix: null, postfix: null,
                 transpiler: new HarmonyMethod(type: typeof(HarmonyPatches), name: nameof(EnterCellKeycardTranspiler)));
+            harmony.Patch(original: AccessTools.Method(type: typeof(Building_Door), name: nameof(Building_Door.Draw)),
+                prefix: new HarmonyMethod(type: typeof(HarmonyPatches), name: nameof(SCPDoorDraw)));
+            harmony.Patch(original: AccessTools.Property(type: typeof(CompPowerTrader), name: nameof(CompPowerTrader.PowerOn)).GetSetMethod(),
+                prefix: null,
+                postfix: null,
+                transpiler: new HarmonyMethod(type: typeof(HarmonyPatches), name: nameof(SCPPowerOnTranspiler)));
 
             //Level Access (Pawns)
             harmony.Patch(original: AccessTools.Method(type: typeof(Pawn_DraftController), name: "GetGizmos"),
@@ -53,7 +59,6 @@ namespace SCP
             if(!(t.GetComp<CompKeycard>() is null) && (pawn.Spawned))
             {
                 __result = !(KeycardUtility.KeyCardAccessToPass(t, pawn));
-                Log.Message("Test: " + __result);
                 return false;
             }
            return true;
@@ -68,7 +73,6 @@ namespace SCP
                 {
                     CompKeycard key = (t as ThingWithComps).GetComp<CompKeycard>();
                     __result = !(key is null);
-                    Log.Message("Pass? " + __result);
                     return false;
                 }
             }
@@ -79,10 +83,8 @@ namespace SCP
         {
             if(t.Spawned && !((t as Building_Door) is null))
             {
-                Log.Message("Check");
                 CompKeycard key = (t as ThingWithComps).GetComp<CompKeycard>();
                 __result = !(key is null);
-                Log.Message("EnterRoom: " + __result);
                 return false;
             }
             return true;
@@ -121,15 +123,70 @@ namespace SCP
                 yield return instruction;
             }
         }
+
+        public static bool SCPDoorDraw(Building_Door __instance, ref int ___visualTicksOpen)
+        {
+            if(!(__instance.GetComp<CompKeycard>() is null))
+            {
+                __instance.Rotation = Building_Door.DoorRotationAt(__instance.Position, __instance.Map);
+                float num = Mathf.Clamp01((float)___visualTicksOpen / (float)__instance.TicksToOpenNow);
+                Vector3 vector = default(Vector3);
+                Mesh mesh;
+
+                vector = new Vector3(0f, 0f, -1f);
+                mesh = MeshPool.plane10;
+
+                Rot4 rotation = __instance.Rotation;
+                rotation.Rotate(RotationDirection.Clockwise);
+                vector = rotation.AsQuat * vector;
+                Vector3 vector2 = __instance.DrawPos;
+                vector2.y = AltitudeLayer.DoorMoveable.AltitudeFor();
+                vector2 += vector * num * 0.95f;
+                Graphics.DrawMesh(mesh, vector2, __instance.Rotation.AsQuat, __instance.Graphic.MatAt(__instance.Rotation, null), 0);
+                
+                return false;
+            }
+            return true;
+        }
+
+        public static IEnumerable<CodeInstruction> SCPPowerOnTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilg)
+        {
+            List<CodeInstruction> instructionList = instructions.ToList();
+            MethodInfo cacheMethod = AccessTools.Method(type: typeof(CompKeycard), name: nameof(CompKeycard.ClearCache));
+            for(int i = 0; i < instructionList.Count; i++)
+            {
+                CodeInstruction instruction = instructionList[i];
+                if(instruction.opcode == OpCodes.Stfld)
+                {
+                    i++;
+                    yield return instruction;
+
+                    yield return new CodeInstruction(opcode: OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(opcode: OpCodes.Call, operand: cacheMethod);
+                    instruction = instructionList[i];
+                }
+                yield return instruction;
+            }
+        }
         #endregion LevelAccess(Doors)
 
         #region LevelAccess(Pawns)
         private static void PawnLevelAccess(Pawn_DraftController __instance, ref IEnumerable<Gizmo> __result)
         {
-            List<Gizmo> gizmos = __result.ToList();
-            //Add more
+            if(!__instance.Drafted)
+            {
+                List<Gizmo> gizmos = __result.ToList();
+                Command_KeycardPawn keyGizmo = new Command_KeycardPawn();
+                keyGizmo.pawn = __instance.pawn;
+                keyGizmo.icon = ContentFinder<Texture2D>.Get("Keycards/Gizmo/KeycardIcon/KeyCardIcon", true);
+                keyGizmo.defaultLabel = "SCP_SetLevelAccess".Translate();
+                keyGizmo.defaultDesc = "SCP_SetLevelAccessDesc".Translate();
+                gizmos.Insert(0, keyGizmo);
+                __result = gizmos;
+            }
         }
 
         #endregion LevelAccess(Pawns)
+
     }
 }

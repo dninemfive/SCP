@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="DoorBase">
+	<ThingDef ParentName="BuildingBase" Name="SCPDoorBase" Abstract="True">
+		<thingClass>Building_Door</thingClass>
+		<category>Building</category>
+		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useHitPoints>true</useHitPoints>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Structure</designationCategory>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<drawerType>RealtimeOnly</drawerType>
+		<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<soundDoorOpenPowered>SCPDoor_Open</soundDoorOpenPowered>
+			<soundDoorClosePowered>SCPDoor_Close</soundDoorClosePowered>
+			<soundDoorOpenManual>SCPDoor_Open</soundDoorOpenManual>
+			<soundDoorCloseManual>SCPDoor_Close</soundDoorCloseManual>
+			<blueprintClass>Blueprint_Door</blueprintClass>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<ThingDef ParentName="SCPDoorBase">
 		<defName>SCP_Door</defName>
 		<label>SCPDoor</label>
 		<description>Blah</description>
 		<statBases>
+			<MaxHitPoints>10000</MaxHitPoints>
+			<Flammability>0.1</Flammability>
 			<WorkToBuild>10</WorkToBuild>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/Door/SCPDoor_Mover</texPath>
+			<texPath>Keycards/Doors/SCPDoorKeyCard_Mover</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<damageData>
 				<enabled>false</enabled>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Building/Door/SCPDoor_MenuIcon</uiIconPath>
+		<uiIconPath>Keycards/Doors/SCPDoorKeyCard_MenuIcon</uiIconPath>
 		<costStuffCount>500</costStuffCount>
-		<designationHotKey>Misc2</designationHotKey>
 		
+		<costList>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>25</Steel>
+		</costList>
+		<designationHotKey>Misc2</designationHotKey>
+		<building>
+			<blueprintGraphicData>
+				<texPath>Keycards/Doors/SCPDoorKeyCard_Blueprint</texPath>
+			</blueprintGraphicData>
+		</building>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 		<comps>
+		<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>250</basePowerConsumption>
+			</li>
 			<li Class="SCP.CompProperties_KeyCard">
 				<compClass>SCP.CompKeyCard</compClass>
 			</li>

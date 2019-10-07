@@ -34,7 +34,7 @@ namespace SCP
                 {
                     if (this.parent is Building_Door)
                     {
-                        this.parent.Map.reachability.ClearCache();
+                        ClearCache();
                     }
                 }
             }
@@ -52,7 +52,7 @@ namespace SCP
                 this.levelAccess = value;
                 if(this.parent is Building_Door)
                 {
-                    this.parent.Map.reachability.ClearCache();
+                    ClearCache();
                 }
             }
         }
@@ -99,12 +99,15 @@ namespace SCP
                 keycard = this,
                 defaultLabel = "SCP_SetLevelAccess".Translate(),
                 defaultDesc = "SCP_SetLevelAccessDesc".Translate(),
-                icon = TexCommand.PauseCaravan
+                icon = ContentFinder<Texture2D>.Get("Keycards/Gizmo/LevelAccess/Level" + Level.ToString(), true)
             };
             yield break;
         }
 
-
+        public void ClearCache()
+        {
+            this.parent.Map.reachability.ClearCache();
+        }
 
         private bool lockedInt = false;
 
