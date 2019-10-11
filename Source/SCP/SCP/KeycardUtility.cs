@@ -57,7 +57,6 @@ namespace SCP
             if (Faction.OfPlayer != t.Faction) return false;
             if (!pawn.RaceProps.Humanlike) return false;
             if (!(t as ThingWithComps).GetComp<CompPowerTrader>().PowerOn) return false;
-            Log.Message("Test: " + (t as ThingWithComps).GetComp<CompPowerTrader>().PowerOn);
             ThingWithComps thingWithComps = t as ThingWithComps;
             if (thingWithComps is null) return true;
             CompKeycard comp = thingWithComps.GetComp<CompKeycard>();
